@@ -1,0 +1,88 @@
+.achievements-page {
+  padding: var(--space-6) var(--space-8);
+}
+
+.achievements-page__workspace {
+  display: flex;
+  flex-direction: column;
+}
+
+.achievements-page__hero {
+  padding: var(--space-6) var(--space-7);
+}
+
+.achievements-page__hero-content {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.achievements-page__hero-icon {
+  background: var(--bg-input);
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.achievements-page__hero-bar {
+  max-width: 480px;
+}
+
+.achievements-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-5);
+}
+
+.achievements-page__badge-card {
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-base);
+}
+
+.achievements-page__badge-card--unlocked {
+  border-color: rgba(16, 185, 129, 0.3);
+  box-shadow: var(--shadow-glow-green);
+}
+
+.achievements-page__badge-card--locked {
+  opacity: 0.65;
+  filter: grayscale(80%);
+}
+
+.achievements-page__badge-card--locked:hover {
+  opacity: 0.85;
+  filter: grayscale(30%);
+}
+
+.achievements-page__badge-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.achievements-page__badge-symbol {
+  font-size: 2.2rem;
+}
+
+.text-xxs {
+  font-size: 0.7rem;
+}
+
+@media (max-width: 768px) {
+  .achievements-page {
+    padding: var(--space-4);
+  }
+  .achievements-page__hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .achievements-page__hero-bar {
+    max-width: 100%;
+  }
+}

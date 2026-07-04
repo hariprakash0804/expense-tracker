@@ -1,0 +1,36 @@
+.portfolio-page {
+  padding: var(--space-6) var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.portfolio-page__metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+
+.portfolio-page__workspace {
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-page__allocation {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: var(--space-6);
+}
+
+@media (max-width: 1024px) {
+  .portfolio-page__metrics,
+  .portfolio-page__allocation {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-page {
+    padding: var(--space-4);
+  }
+}

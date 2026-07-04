@@ -1,0 +1,173 @@
+/* ===== DASHBOARD ===== */
+.dashboard {
+  padding: var(--space-6) var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.dashboard__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+}
+
+.dashboard__section-title {
+  font-size: var(--fs-base);
+  font-weight: 600;
+  padding: var(--space-5);
+  padding-bottom: 0;
+}
+
+.dashboard__charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+}
+
+.dashboard__chart-card {
+  padding-bottom: var(--space-5);
+  overflow: hidden;
+}
+
+.dashboard__pie-container {
+  padding: var(--space-4);
+}
+
+.dashboard__pie-legend {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: 0 var(--space-5);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.dashboard__legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-sm);
+}
+
+.dashboard__legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.dashboard__legend-label {
+  flex: 1;
+  color: var(--text-secondary);
+}
+
+.dashboard__legend-value {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.dashboard__bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+}
+
+/* Transactions */
+.dashboard__transactions {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard__transaction {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background var(--transition-fast);
+}
+
+.dashboard__transaction:last-child {
+  border-bottom: none;
+}
+
+.dashboard__transaction:hover {
+  background: var(--bg-input);
+}
+
+.dashboard__transaction-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--bg-input);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.dashboard__transaction-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.dashboard__transaction-desc {
+  display: block;
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dashboard__transaction-meta {
+  display: block;
+  font-size: var(--fs-xs);
+  color: var(--text-tertiary);
+  margin-top: 2px;
+}
+
+.dashboard__transaction-amount {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--accent-danger);
+  white-space: nowrap;
+}
+
+/* Budget overview */
+.dashboard__budgets {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-5);
+}
+
+.dashboard__budget-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .dashboard__stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: var(--space-4);
+  }
+
+  .dashboard__stats {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard__charts,
+  .dashboard__bottom {
+    grid-template-columns: 1fr;
+  }
+}

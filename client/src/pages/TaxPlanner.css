@@ -1,0 +1,99 @@
+.tax-page {
+  padding: var(--space-6) var(--space-8);
+}
+
+.tax-page__grid {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: var(--space-6);
+}
+
+.tax-page__panel {
+  padding: var(--space-6);
+  height: fit-content;
+}
+
+.tax-page__section-title {
+  font-size: var(--fs-base);
+  font-weight: 600;
+}
+
+.tax-page__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.tax-page__main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.tax-page__recommendation {
+  padding: var(--space-5);
+  border-left: 4px solid var(--accent-primary);
+  background: rgba(16, 185, 129, 0.05);
+}
+
+.tax-page__star-icon {
+  font-size: 2.2rem;
+  color: var(--accent-primary);
+  flex-shrink: 0;
+}
+
+.tax-page__comparison-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+}
+
+.stat-card--selected {
+  border-color: var(--accent-primary);
+  box-shadow: var(--shadow-glow-green);
+}
+
+.tax-page__chart-card {
+  padding: var(--space-5);
+}
+
+.tax-page__chart-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.tax-page__chart-legend {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.tax-page__legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.tax-page__legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+}
+
+@media (max-width: 1024px) {
+  .tax-page__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .tax-page {
+    padding: var(--space-4);
+  }
+  .tax-page__comparison-cards {
+    grid-template-columns: 1fr;
+  }
+}

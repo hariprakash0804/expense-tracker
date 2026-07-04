@@ -1,0 +1,101 @@
+.balance-sheet-page {
+  padding: var(--space-6) var(--space-8);
+}
+
+.balance-sheet-page__workspace {
+  display: flex;
+  flex-direction: column;
+}
+
+.balance-sheet-page__net-worth-banner {
+  padding: var(--space-6) var(--space-7);
+}
+
+.balance-sheet-page__solvency {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-md);
+}
+
+.balance-sheet-page__solvency--good {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--accent-primary);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.balance-sheet-page__solvency--warning {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--accent-warning);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.balance-sheet-page__solvency--danger {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--accent-danger);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.balance-sheet-page__tables-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+}
+
+.balance-sheet-page__section {
+  padding: var(--space-5);
+}
+
+.balance-sheet-page__list {
+  max-height: 380px;
+  overflow-y: auto;
+  padding-right: var(--space-2);
+}
+
+.balance-sheet-page__item {
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+}
+
+.balance-sheet-page__item:hover {
+  border-color: var(--border-medium);
+}
+
+.balance-sheet-page__chart-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.balance-sheet-page__chart-labels {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.balance-sheet-page__legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.balance-sheet-page__legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+}
+
+@media (max-width: 1024px) {
+  .balance-sheet-page__tables-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .balance-sheet-page {
+    padding: var(--space-4);
+  }
+}

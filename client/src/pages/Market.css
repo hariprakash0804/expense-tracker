@@ -1,0 +1,28 @@
+.market-page { padding: var(--space-6) var(--space-8); display: flex; flex-direction: column; gap: var(--space-5); }
+.market-page__section { padding: var(--space-6); }
+.market-page__section-title { font-size: var(--fs-lg); font-weight: 700; margin-bottom: var(--space-4); }
+
+.market-page__rates-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: var(--space-3); }
+.market-page__rate-card { padding: var(--space-4); background: var(--bg-input); border-radius: var(--radius-md); text-align: center; }
+.market-page__rate-currency { display: block; font-size: var(--fs-lg); font-weight: 700; color: var(--accent-secondary); }
+.market-page__rate-value { display: block; font-size: var(--fs-xl); font-weight: 700; margin: var(--space-1) 0; }
+
+.market-page__metals-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+.market-page__metal-card { padding: var(--space-5); display: flex; flex-direction: column; gap: var(--space-3); }
+.market-page__metal-prices { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); }
+.market-page__metal-price { text-align: center; padding: var(--space-2); background: var(--bg-input); border-radius: var(--radius-sm); }
+
+.market-page__stocks-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--space-4); }
+.market-page__stock-card { padding: var(--space-5); display: flex; flex-direction: column; gap: var(--space-2); }
+
+.market-page__news-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+.market-page__news-card { padding: var(--space-5); display: flex; flex-direction: column; justify-content: space-between; gap: var(--space-3); text-decoration: none; color: inherit; }
+.market-page__news-title { font-size: var(--fs-sm); font-weight: 600; line-height: 1.4; margin-bottom: var(--space-2); color: var(--text-primary); }
+.market-page__news-summary { font-size: var(--fs-xs); color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.market-page__news-meta { display: flex; align-items: center; gap: var(--space-3); }
+
+@media (max-width: 768px) {
+  .market-page { padding: var(--space-4); }
+  .market-page__metals-grid, .market-page__news-grid { grid-template-columns: 1fr; }
+  .market-page__metal-prices { grid-template-columns: 1fr; }
+}

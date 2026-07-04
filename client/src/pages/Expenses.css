@@ -1,0 +1,18 @@
+.expenses-page { padding: var(--space-6) var(--space-8); display: flex; flex-direction: column; gap: var(--space-5); }
+.expenses-page__toolbar { display: flex; align-items: center; justify-content: space-between; padding: var(--space-4) var(--space-5); gap: var(--space-4); }
+.expenses-page__toolbar-left { display: flex; align-items: center; gap: var(--space-3); flex: 1; }
+.expenses-page__search { max-width: 300px; flex: 1; }
+.expenses-page__filters { padding: var(--space-5); }
+.expenses-page__filter-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); }
+.expenses-page__filter-actions { display: flex; gap: var(--space-3); margin-top: var(--space-4); }
+.expenses-page__table-container { overflow-x: auto; }
+.expenses-page__pagination { display: flex; align-items: center; justify-content: center; gap: var(--space-4); padding: var(--space-4); border-top: 1px solid var(--border-subtle); }
+.expenses-modal__grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+.btn--active { background: var(--accent-primary-glow); color: var(--accent-primary); border-color: var(--accent-primary); }
+
+@media (max-width: 768px) {
+  .expenses-page { padding: var(--space-4); }
+  .expenses-page__filter-grid { grid-template-columns: 1fr 1fr; }
+  .expenses-page__toolbar-left { flex-wrap: wrap; }
+  .expenses-modal__grid { grid-template-columns: 1fr; }
+}

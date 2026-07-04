@@ -1,0 +1,62 @@
+.savings-page {
+  padding: var(--space-6) var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.savings-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-5);
+}
+
+.savings-page__card {
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  position: relative;
+  overflow: hidden;
+}
+
+.savings-page__card--achieved {
+  border-color: rgba(16, 185, 129, 0.3);
+  box-shadow: var(--shadow-glow-green);
+}
+
+.savings-page__card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.savings-page__card-title {
+  font-size: var(--fs-base);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.savings-page__progress-container {
+  background: var(--bg-input);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+}
+
+.savings-page__card-amounts {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: var(--space-3);
+}
+
+.savings-page__amount-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .savings-page {
+    padding: var(--space-4);
+  }
+}
