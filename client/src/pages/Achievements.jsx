@@ -140,7 +140,7 @@ const Achievements = () => {
                 <div className="achievements-page__hero-icon">
                   <HiOutlineBadgeCheck size={48} className="text-primary" style={{ color: 'var(--accent-primary)' }} />
                 </div>
-                <div>
+                <div className="achievements-page__hero-details">
                   <h3 className="text-xl font-bold">Financial Health Progress</h3>
                   <p className="text-sm text-secondary">
                     You have unlocked <strong>{unlockedCount}</strong> of <strong>{totalMilestones}</strong> milestones. Keep logging transactions to unlock more!

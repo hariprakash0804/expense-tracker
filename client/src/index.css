@@ -829,6 +829,7 @@ body {
 .block { display: block; }
 .inline-block { display: inline-block; }
 .flex { display: flex; }
+.flex-1 { flex: 1; }
 .flex-col { flex-direction: column; }
 .items-center { align-items: center; }
 .justify-center { justify-content: center; }

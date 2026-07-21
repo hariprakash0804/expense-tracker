@@ -125,7 +125,7 @@ const BillSplitter = () => {
   const getShareableText = () => {
     let text = `📝 Split for "${billTitle}" (Total: ${formatCurrency(billVal, user?.currency)})\n`;
     text += `Category: ${category}\n`;
-    text += `-------------------------------------\n`;
+    text += `-----------------------------\n`;
     shares.forEach(s => {
       text += `👤 ${s.name}: ${formatCurrency(s.calculatedShare, user?.currency)}\n`;
     });
@@ -237,7 +237,7 @@ const BillSplitter = () => {
 
               <div className="glass-card stat-card">
                 <p className="stat-card__label">Group Split Output</p>
-                <textarea className="form-input text-xxs mt-2 font-mono" style={{ height: '80px', resize: 'none' }} readOnly value={getShareableText()} />
+                <textarea className="form-input text-xxs mt-2 font-mono" style={{ height: '130px', resize: 'none' }} readOnly value={getShareableText()} />
                 <button className="btn btn--ghost btn--sm mt-2 flex items-center gap-1" onClick={handleCopyText}>
                   <HiOutlineShare /> Copy Split Details
                 </button>

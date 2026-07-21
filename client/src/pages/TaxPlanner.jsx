@@ -230,15 +230,15 @@ const TaxPlanner = () => {
               <div className={`glass-card stat-card ${bestRegime === 'Old Regime' ? 'stat-card--selected' : ''}`}>
                 <p className="stat-card__label">Old Tax Regime</p>
                 <p className="stat-card__value text-danger">{formatCurrency(oldRegime.tax, user?.currency)}</p>
-                <span className="text-xs text-secondary mt-1">Taxable: {formatCurrency(oldRegime.taxableIncome, user?.currency)}</span>
-                <span className="text-xs text-secondary">Deductions: {formatCurrency(oldRegime.deductions, user?.currency)}</span>
+                <span className="block text-xs text-secondary mt-1">Taxable: {formatCurrency(oldRegime.taxableIncome, user?.currency)}</span>
+                <span className="block text-xs text-secondary">Deductions: {formatCurrency(oldRegime.deductions, user?.currency)}</span>
               </div>
 
               <div className={`glass-card stat-card ${bestRegime === 'New Regime' ? 'stat-card--selected' : ''}`}>
                 <p className="stat-card__label">New Tax Regime</p>
                 <p className="stat-card__value text-danger">{formatCurrency(newRegime.tax, user?.currency)}</p>
-                <span className="text-xs text-secondary mt-1">Taxable: {formatCurrency(newRegime.taxableIncome, user?.currency)}</span>
-                <span className="text-xs text-secondary">Deductions: {formatCurrency(newRegime.deductions, user?.currency)}</span>
+                <span className="block text-xs text-secondary mt-1">Taxable: {formatCurrency(newRegime.taxableIncome, user?.currency)}</span>
+                <span className="block text-xs text-secondary">Deductions: {formatCurrency(newRegime.deductions, user?.currency)}</span>
               </div>
             </div>
 

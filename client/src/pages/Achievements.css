@@ -17,6 +17,10 @@
   gap: var(--space-5);
 }
 
+.achievements-page__hero-details {
+  flex: 1;
+}
+
 .achievements-page__hero-icon {
   background: var(--bg-input);
   padding: var(--space-4);
