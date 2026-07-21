@@ -579,7 +579,7 @@ body {
 
 /* ===== STAT CARD ===== */
 .stat-card {
-  padding: var(--space-6);
+  padding: var(--space-5) var(--space-4);
   position: relative;
   overflow: hidden;
 }
@@ -602,10 +602,13 @@ body {
 }
 
 .stat-card__value {
-  font-size: var(--fs-3xl);
+  font-size: clamp(1.35rem, 2.2vw, var(--fs-3xl));
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: var(--space-2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .stat-card__trend {
