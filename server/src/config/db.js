@@ -1,6 +1,13 @@
 const { Sequelize } = require('sequelize');
 require('dotenv').config();
 
+// Determine if we should use SSL. TiDB Cloud requires SSL connections.
+const useSSL = process.env.DB_SSL === 'true' || 
+  (process.env.DB_HOST && (
+    process.env.DB_HOST.includes('tidbcloud.com') || 
+    process.env.DB_HOST.includes('tidb')
+  ));
+
 const sequelize = new Sequelize(
   process.env.DB_NAME || 'expense_tracker',
   process.env.DB_USER || 'root',
@@ -10,6 +17,12 @@ const sequelize = new Sequelize(
     port: parseInt(process.env.DB_PORT) || 3306,
     dialect: 'mysql',
     logging: process.env.NODE_ENV === 'development' ? console.log : false,
+    dialectOptions: useSSL ? {
+      ssl: {
+        minVersion: 'TLSv1.2',
+        rejectUnauthorized: true,
+      },
+    } : {},
     pool: {
       max: 10,
       min: 0,
