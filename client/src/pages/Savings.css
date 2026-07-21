@@ -59,4 +59,7 @@
   .savings-page {
     padding: var(--space-4);
   }
+  .savings-page__grid {
+    grid-template-columns: 1fr;
+  }
 }

@@ -98,4 +98,7 @@
   .balance-sheet-page {
     padding: var(--space-4);
   }
+  .balance-sheet-page__net-worth-banner {
+    padding: var(--space-5) var(--space-4);
+  }
 }

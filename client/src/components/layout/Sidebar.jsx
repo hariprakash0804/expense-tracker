@@ -32,14 +32,18 @@ const navItems = [
   { to: '/settings', icon: HiOutlineCog, label: 'Settings' },
 ];
 
-const Sidebar = () => {
+const Sidebar = ({ mobileOpen, closeSidebar }) => {
   const [collapsed, setCollapsed] = useState(false);
   const { user, logout } = useAuth();
   const location = useLocation();
 
+  const handleLinkClick = () => {
+    if (closeSidebar) closeSidebar();
+  };
+
   return (
     <>
-      <aside className={`sidebar ${collapsed ? 'sidebar--collapsed' : ''}`}>
+      <aside className={`sidebar ${collapsed ? 'sidebar--collapsed' : ''} ${mobileOpen ? 'sidebar--open' : ''}`}>
         <div className="sidebar__header">
           {!collapsed && (
             <div className="sidebar__logo">
@@ -67,6 +71,7 @@ const Sidebar = () => {
               }
               end={to === '/'}
               title={label}
+              onClick={handleLinkClick}
             >
               <Icon className="sidebar__link-icon" />
               {!collapsed && <span className="sidebar__link-text">{label}</span>}
@@ -89,7 +94,7 @@ const Sidebar = () => {
               </div>
             </div>
           )}
-          <button className="sidebar__logout" onClick={logout} title="Logout">
+          <button className="sidebar__logout" onClick={() => { logout(); handleLinkClick(); }} title="Logout">
             <HiOutlineLogout />
             {!collapsed && <span>Logout</span>}
           </button>

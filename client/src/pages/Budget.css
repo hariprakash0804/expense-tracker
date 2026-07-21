@@ -17,4 +17,5 @@
   .budget-page__summary { flex-wrap: wrap; }
   .budget-page__summary-divider { display: none; }
   .budget-page__summary-item { min-width: 45%; }
+  .budget-page__grid { grid-template-columns: 1fr; }
 }
