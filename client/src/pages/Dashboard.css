@@ -163,11 +163,34 @@
   }
 
   .dashboard__stats {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .dashboard__charts,
   .dashboard__bottom {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard {
+    padding: var(--space-3);
+    gap: var(--space-4);
+  }
+
+  .dashboard__stats {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .dashboard__transaction {
+    padding: var(--space-3);
+    gap: var(--space-3);
+  }
+
+  .dashboard__transaction-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
   }
 }

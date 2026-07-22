@@ -63,3 +63,12 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 480px) {
+  .savings-page {
+    padding: var(--space-3);
+  }
+  .savings-page__card {
+    padding: var(--space-4);
+  }
+}

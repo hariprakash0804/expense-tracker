@@ -11,3 +11,9 @@
   .recurring-page__grid { grid-template-columns: 1fr; }
   .recurring-page__card-body { grid-template-columns: 1fr; }
 }
+
+@media (max-width: 480px) {
+  .recurring-page { padding: var(--space-3); }
+  .recurring-page__card { padding: var(--space-4); }
+  .recurring-page__card-actions { flex-wrap: wrap; }
+}

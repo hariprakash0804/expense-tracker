@@ -50,3 +50,12 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 600px) {
+  .calcs-page {
+    padding: var(--space-3);
+  }
+  .calcs-page__panel {
+    padding: var(--space-4);
+  }
+}

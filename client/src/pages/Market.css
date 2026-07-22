@@ -26,3 +26,10 @@
   .market-page__metals-grid, .market-page__news-grid { grid-template-columns: 1fr; }
   .market-page__metal-prices { grid-template-columns: 1fr; }
 }
+
+@media (max-width: 480px) {
+  .market-page { padding: var(--space-3); }
+  .market-page__section { padding: var(--space-4); }
+  .market-page__rates-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
+  .market-page__stocks-grid { grid-template-columns: 1fr; }
+}

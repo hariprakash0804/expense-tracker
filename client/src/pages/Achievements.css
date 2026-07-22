@@ -90,3 +90,15 @@
     max-width: 100%;
   }
 }
+
+@media (max-width: 480px) {
+  .achievements-page {
+    padding: var(--space-3);
+  }
+  .achievements-page__hero {
+    padding: var(--space-4);
+  }
+  .achievements-page__grid {
+    grid-template-columns: 1fr;
+  }
+}

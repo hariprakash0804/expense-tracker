@@ -97,3 +97,14 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 480px) {
+  .tax-page {
+    padding: var(--space-3);
+  }
+  .tax-page__panel,
+  .tax-page__chart-card,
+  .tax-page__recommendation {
+    padding: var(--space-4);
+  }
+}

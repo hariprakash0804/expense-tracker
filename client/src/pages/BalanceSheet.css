@@ -102,3 +102,12 @@
     padding: var(--space-5) var(--space-4);
   }
 }
+
+@media (max-width: 480px) {
+  .balance-sheet-page {
+    padding: var(--space-3);
+  }
+  .balance-sheet-page__section {
+    padding: var(--space-4);
+  }
+}

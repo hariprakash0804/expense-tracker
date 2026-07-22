@@ -12,7 +12,16 @@
 
 @media (max-width: 768px) {
   .expenses-page { padding: var(--space-4); }
+  .expenses-page__toolbar { flex-direction: column; align-items: stretch; padding: var(--space-3); }
+  .expenses-page__toolbar-left { flex-wrap: wrap; width: 100%; }
+  .expenses-page__search { max-width: 100%; width: 100%; }
   .expenses-page__filter-grid { grid-template-columns: 1fr 1fr; }
-  .expenses-page__toolbar-left { flex-wrap: wrap; }
   .expenses-modal__grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .expenses-page { padding: var(--space-3); }
+  .expenses-page__filter-grid { grid-template-columns: 1fr; }
+  .expenses-page__filter-actions { flex-wrap: wrap; }
+  .expenses-page__pagination { gap: var(--space-2); flex-wrap: wrap; font-size: var(--fs-xs); }
 }

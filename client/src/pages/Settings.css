@@ -5,4 +5,12 @@
 .settings-page__theme-toggle { display: flex; align-items: center; justify-content: space-between; }
 .settings-page__danger { border-color: rgba(239, 68, 68, 0.2); }
 
-@media (max-width: 768px) { .settings-page { padding: var(--space-4); } }
+@media (max-width: 768px) {
+  .settings-page { padding: var(--space-4); }
+  .settings-page__section { padding: var(--space-4); }
+  .settings-page__form { max-width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .settings-page { padding: var(--space-3); }
+}

@@ -44,3 +44,12 @@
     padding: var(--space-4);
   }
 }
+
+@media (max-width: 480px) {
+  .debt-page {
+    padding: var(--space-3);
+  }
+  .debt-page__strategy-card {
+    padding: var(--space-4);
+  }
+}

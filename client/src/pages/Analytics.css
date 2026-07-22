@@ -17,3 +17,9 @@
   .analytics-page__charts { grid-template-columns: 1fr; }
   .analytics-page__chart--wide { grid-column: span 1; }
 }
+
+@media (max-width: 480px) {
+  .analytics-page { padding: var(--space-3); }
+  .analytics-page__period-bar { justify-content: center; }
+  .analytics-page__chart { padding: var(--space-3); }
+}

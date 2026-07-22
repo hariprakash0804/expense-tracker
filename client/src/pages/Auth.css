@@ -93,3 +93,22 @@
   font-weight: 600;
   white-space: nowrap;
 }
+
+@media (max-width: 480px) {
+  .auth-page {
+    padding: var(--space-3);
+  }
+  .auth-card {
+    padding: var(--space-6) var(--space-4);
+  }
+  .auth-card__header {
+    margin-bottom: var(--space-5);
+  }
+  .auth-card__logo {
+    font-size: 2.2rem;
+    margin-bottom: var(--space-2);
+  }
+  .auth-card__title {
+    font-size: var(--fs-2xl);
+  }
+}

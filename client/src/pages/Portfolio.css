@@ -34,3 +34,9 @@
     padding: var(--space-4);
   }
 }
+
+@media (max-width: 480px) {
+  .portfolio-page {
+    padding: var(--space-3);
+  }
+}

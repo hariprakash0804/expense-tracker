@@ -64,13 +64,40 @@
   .income-page {
     padding: var(--space-4);
   }
-  .income-page__filter-grid {
-    grid-template-columns: 1fr 1fr;
+  .income-page__toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: var(--space-3);
   }
   .income-page__toolbar-left {
     flex-wrap: wrap;
+    width: 100%;
+  }
+  .income-page__search {
+    max-width: 100%;
+    width: 100%;
+  }
+  .income-page__filter-grid {
+    grid-template-columns: 1fr 1fr;
   }
   .income-modal__grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .income-page {
+    padding: var(--space-3);
+  }
+  .income-page__filter-grid {
+    grid-template-columns: 1fr;
+  }
+  .income-page__filter-actions {
+    flex-wrap: wrap;
+  }
+  .income-page__pagination {
+    gap: var(--space-2);
+    flex-wrap: wrap;
+    font-size: var(--fs-xs);
   }
 }

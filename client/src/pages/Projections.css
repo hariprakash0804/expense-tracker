@@ -82,3 +82,13 @@
     padding: var(--space-4);
   }
 }
+
+@media (max-width: 480px) {
+  .projections-page {
+    padding: var(--space-3);
+  }
+  .projections-page__panel,
+  .projections-page__chart-card {
+    padding: var(--space-4);
+  }
+}
